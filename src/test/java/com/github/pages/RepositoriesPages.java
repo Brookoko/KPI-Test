@@ -11,7 +11,7 @@ public class RepositoriesPages
     private final WebDriverWait wait;
 
     private final By repository = By.id("new_repository");
-    private final By newButton = By.cssSelector("a[href=\"/new\"][class=\"text-center btn btn-primary ml-3\"]");
+    private final By newButton = By.linkText("New");
 
     public RepositoriesPages(WebDriver driver)
     {

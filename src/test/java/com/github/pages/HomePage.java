@@ -13,7 +13,7 @@ public class HomePage
     private final WebDriver driver;
     private final WebDriverWait wait;
 
-    private final By singInLocator = By.cssSelector("a[href=\"/login\"]");
+    private final By singInLocator = By.linkText("Sign in");
 
     private final By singIn = By.id("login");
     private final By repositories = By.id("user-repositories-list");

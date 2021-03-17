@@ -17,7 +17,7 @@ public class RepositoryPage
     private final By deleteInput = By.xpath("//*[contains(@class, \"Box-body overflow-auto\")]/form/p/input");
     private final By deleteButton = By.xpath("//form[contains(@action, \"delete\")]/button");
 
-    @FindBy(id = "repository_name")
+    @FindBy(name = "repository[name]")
     private WebElement repositoryName;
 
     @FindBy(css = "button[type=\"submit\"][class=\"btn btn-primary first-in-line\"]")
