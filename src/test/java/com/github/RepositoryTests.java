@@ -20,7 +20,7 @@ public class RepositoryTests extends WebDriverTests
     @BeforeClass
     public static void setup()
     {
-        XmlLoader loader = new XmlLoader();
+        UserDataLoader loader = new UserDataLoader();
         TestUser user = loader.Load();
         username = user.username;
         password = user.password;

@@ -19,7 +19,7 @@ public class SingInTests extends WebDriverTests
     @BeforeClass
     public static void setup()
     {
-        XmlLoader loader = new XmlLoader();
+        UserDataLoader loader = new UserDataLoader();
         TestUser user = loader.Load();
         username = user.username;
         email = user.email;
