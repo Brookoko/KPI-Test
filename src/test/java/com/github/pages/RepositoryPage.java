@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.concurrent.TimeUnit;
+
 public class RepositoryPage
 {
     private final WebDriver driver;
@@ -41,7 +43,7 @@ public class RepositoryPage
 
     public void createRepository()
     {
-        wait.until(ExpectedConditions.not(ExpectedConditions.attributeContains(createButton, "disabled", "")));
+        wait.until(ExpectedConditions.elementToBeClickable(createButton));
         createButton.click();
     }
 
@@ -65,7 +67,7 @@ public class RepositoryPage
     public void deleteRepository()
     {
         WebElement delete = driver.findElement(deleteButton);
-        wait.until(ExpectedConditions.not(ExpectedConditions.attributeContains(delete, "disabled", "")));
+        wait.until(ExpectedConditions.elementToBeClickable(delete));
         delete.click();
     }
 

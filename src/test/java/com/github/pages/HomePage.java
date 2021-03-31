@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.concurrent.TimeUnit;
+
 public class HomePage
 {
     private final String url = "https://github.com/";
@@ -32,6 +34,7 @@ public class HomePage
     public void openSignInPage()
     {
         driver.findElement(singInLocator).click();
+        driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
         wait.until(ExpectedConditions.visibilityOfElementLocated(singIn));
     }
 

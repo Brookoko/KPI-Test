@@ -17,7 +17,7 @@ public class SingInTests extends WebDriverTests
     private static String password;
 
     @BeforeClass
-    public static void generateEmail()
+    public static void setup()
     {
         XmlLoader loader = new XmlLoader();
         TestUser user = loader.Load();

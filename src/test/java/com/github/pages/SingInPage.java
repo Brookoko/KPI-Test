@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.concurrent.TimeUnit;
+
 public class SingInPage
 {
     private final WebDriver driver;
@@ -27,16 +29,19 @@ public class SingInPage
 
     public void fillLogin(String login)
     {
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         loginElement.sendKeys(login);
     }
 
     public void fillPassword(String password)
     {
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         passwordElement.sendKeys(password);
     }
 
     public void signIn()
     {
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         signInButton.click();
     }
 
