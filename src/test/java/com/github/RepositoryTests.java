@@ -68,18 +68,6 @@ public class RepositoryTests extends WebDriverTests
     }
 
     @Test
-    public void createRepositoryWithTakenName()
-    {
-        RepositoryPage page = PageFactory.initElements(driver, RepositoryPage.class);
-
-        page.fillName("KPI-Test");
-        page.createRepository();
-
-        String repositoryUrl = url + username + "/KPI-Test";
-        Assert.assertEquals(repositoryUrl, page.getCurrentUrl());
-    }
-
-    @Test
     public void deleteRepository()
     {
         RepositoryPage page = PageFactory.initElements(driver, RepositoryPage.class);
